@@ -1,21 +1,19 @@
-function postMessageToDiscord(message) {
-
-  message = message || "If u click u gay";
-  
-  var discordUrl = 'https://discordapp.com/api/webhooks/labnol/123';
-  var payload = JSON.stringify({content: message});
-  
-  var params = {
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    },
-    method: "POST",
-    payload: payload,
-    muteHttpExceptions: true
-  };
-  
-  var response = UrlFetchApp.fetch(discordUrl, params);
-  
-  Logger.log(response.getContentText());
-
+{
+  "content": "this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```",
+  "embed": {
+    "title": "title ~~(did you know you can have markdown here too?)~~",
+    "description": "this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```",
+    "url": "https://discordapp.com",
+    "color": 7214773,
+    "timestamp": "2019-10-26T03:59:58.534Z",
+    "footer": {
+      "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+      "text": "footer text"
+    "fields": [
+      {
+        "name": "🤔",
+        "value": "Jimmy Gay"
+        }
+    ]
+  }
 }
